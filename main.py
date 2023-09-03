@@ -14,7 +14,7 @@ pg_uri = f"postgresql+psycopg2://{username}:{password}@{host}:{port}/{mydatabase
 db = SQLDatabase.from_uri(pg_uri)
 print(db)
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = ""
 llm = ChatOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY, model_name='gpt-3.5-turbo')
 
 
