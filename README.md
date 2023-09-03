@@ -7,7 +7,7 @@ One reason why LLMs can return such confident lies is that LLMs will attempt to 
 
 This article will demonstrate how to use a LLM with a SQL database by connecting OpenAI’s GPT-3.5 to a postgres database. We will be using LangChain for our framework and will be writing in Python.
 
-#1. Getting started
+**1. Getting started**
 Let us install the required packages first, make sure you have already installed postgreSQL on your machine and have an OpenAI account as well. Create a new python virtual environment if needed:
 
 pip install langchain 
@@ -20,7 +20,7 @@ from langchain.chat_models import ChatOpenAI
 #from langchain import SQLDatabaseChain
 from langchain_experimental.sql import SQLDatabaseChain
 
-#2. Connect the database
+**2. Connect the database**
 Before we can connect the database to our LLM, let us first get a database to connect to. Since LangChain uses SQLAlchemy to connect to SQL databases, we can use any SQL dialect supported by SQLAlchemy, such as MS SQL, MySQL, MariaDB, PostgreSQL, Oracle SQL, Databricks, or SQLite. If you would like to know more about the requirements for connecting to databases, please refer to the SQLAlchemy documentation here. In my example I will be using Dataherald’s postgres real_estate database. This database contains 16 tables about rent, sales, inventory, and various other real estate information for locations across the United States in the last couple years. We will connect our LLM to this database in attempt to answer real estate questions in the United States.
 
 The postgres database connection with psycopg2 looks like the following string:
@@ -40,7 +40,7 @@ db = SQLDatabase.from_uri(pg_uri)
 
 
 
-**#3. Setup LLM**
+**3. Setup LLM**
 Since we will be using GPT-3.5, we will use an OpenAI API key:
 
 OPENAI_API_KEY = ""
