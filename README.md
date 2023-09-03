@@ -62,3 +62,9 @@ db_chain.run(PROMPT.format(question=question))
 
 print(db_chain)
 
+##Input and output
+
+**Question : what is the average rent price in chicago from nov 2021 according to redfin?
+**
+Answer:The average rent price in Chicago from November 2021 until now is $1525.
+
