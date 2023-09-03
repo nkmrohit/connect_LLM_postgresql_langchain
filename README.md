@@ -40,7 +40,7 @@ db = SQLDatabase.from_uri(pg_uri)
 
 
 
-#3. Setup LLM
+**#3. Setup LLM**
 Since we will be using GPT-3.5, we will use an OpenAI API key:
 
 OPENAI_API_KEY = ""
